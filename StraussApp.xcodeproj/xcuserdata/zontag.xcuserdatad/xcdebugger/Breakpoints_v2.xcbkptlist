@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B0DE2B15-E693-4813-ADDF-4E219B79F310"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A68595A-393B-4DE6-9A15-9D42215B707D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoinApp/CoreData/CoinLocal.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "CoinLocal"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DEEBC5F-5E35-4F39-B104-61A40606FFAE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StraussApp/Repositories/MusicVideoRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "searchMusicVideo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1DEEBC5F-5E35-4F39-B104-61A40606FFAE - cc51cc0595eb7b77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for StraussApp.MusicVideoRepository.searchMusicVideo() async -&gt; (Swift.Array&lt;StraussApp.MusicVideo&gt;, Swift.Optional&lt;StraussApp.DomainError&gt;)"
+                  moduleName = "StraussApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zontag/Developer/StraussApp/StraussApp/Repositories/MusicVideoRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "1DEEBC5F-5E35-4F39-B104-61A40606FFAE - cc51cc0595eb7b77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for StraussApp.MusicVideoRepository.searchMusicVideo() async -&gt; (Swift.Array&lt;StraussApp.MusicVideo&gt;, Swift.Optional&lt;StraussApp.DomainError&gt;)"
+                  moduleName = "StraussApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zontag/Developer/StraussApp/StraussApp/Repositories/MusicVideoRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "1DEEBC5F-5E35-4F39-B104-61A40606FFAE - cc51cc0595eb7b77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for StraussApp.MusicVideoRepository.searchMusicVideo() async -&gt; (Swift.Array&lt;StraussApp.MusicVideo&gt;, Swift.Optional&lt;StraussApp.DomainError&gt;)"
+                  moduleName = "StraussApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zontag/Developer/StraussApp/StraussApp/Repositories/MusicVideoRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DED56FC7-3198-4B96-AD77-496882C02C02"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StraussApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "persistentContainer"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DED56FC7-3198-4B96-AD77-496882C02C02 - aaf46a41eb628518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; __C.NSPersistentContainer in StraussApp.AppDelegate.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "StraussApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zontag/Developer/StraussApp/StraussApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "DED56FC7-3198-4B96-AD77-496882C02C02 - aaf46a41eb628271"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; __C.NSPersistentContainer in StraussApp.AppDelegate.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "StraussApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zontag/Developer/StraussApp/StraussApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "DED56FC7-3198-4B96-AD77-496882C02C02 - aaf46a41eb628271"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; __C.NSPersistentContainer in StraussApp.AppDelegate.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "StraussApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zontag/Developer/StraussApp/StraussApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

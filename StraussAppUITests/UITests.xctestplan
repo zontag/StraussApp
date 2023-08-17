@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F0845358-D751-4162-A4DC-105290F55220",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:StraussApp.xcodeproj",
+        "identifier" : "69A3DA282A3F37D000136127",
+        "name" : "StraussAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

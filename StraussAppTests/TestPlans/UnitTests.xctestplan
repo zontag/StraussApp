@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "1A6D0BE6-51BD-4E63-B34C-0A542C273EA2",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:StraussApp.xcodeproj",
+        "identifier" : "69F5C9ED2A3B60A700136EA0",
+        "name" : "StraussAppTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:StraussApp.xcodeproj",
+        "identifier" : "69A3DA282A3F37D000136127",
+        "name" : "StraussAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

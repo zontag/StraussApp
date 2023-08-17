@@ -1,0 +1,938 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		690EEBAA2A3DAB3400058B55 /* SearchStraussTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBA92A3DAB3400058B55 /* SearchStraussTracksUseCase.swift */; };
+		690EEBAD2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBAC2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift */; };
+		690EEBAF2A3DAD0E00058B55 /* MockMusicTrackRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBAE2A3DAD0E00058B55 /* MockMusicTrackRepository.swift */; };
+		690EEBB12A3DB76100058B55 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBB02A3DB76100058B55 /* SearchResultViewModel.swift */; };
+		690EEBB72A3DBFAD00058B55 /* SearchResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBB62A3DBFAD00058B55 /* SearchResultViewModelTests.swift */; };
+		690EEBB92A3DBFD400058B55 /* MockSearchStraussTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBB82A3DBFD400058B55 /* MockSearchStraussTracksUseCase.swift */; };
+		690EEBBB2A3DEA0C00058B55 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBBA2A3DEA0C00058B55 /* Coordinator.swift */; };
+		690EEBBD2A3DEB2E00058B55 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBBC2A3DEB2E00058B55 /* SearchCoordinator.swift */; };
+		690EEBBF2A3DED0300058B55 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBBE2A3DED0300058B55 /* SceneCoordinator.swift */; };
+		6914370E2A890BF90068AD0A /* StraussAppStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6914370C2A890BF90068AD0A /* StraussAppStore.xcdatamodeld */; };
+		691437102A8911B90068AD0A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914370F2A8911B90068AD0A /* ImageCache.swift */; };
+		691437122A891B0D0068AD0A /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691437112A891B0D0068AD0A /* UIImageView+Extensions.swift */; };
+		6941A9F92A3CCDCC00A4130C /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941A9F82A3CCDCC00A4130C /* MockAPI.swift */; };
+		6941A9FB2A3CD8C000A4130C /* MockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941A9FA2A3CD8C000A4130C /* MockStore.swift */; };
+		6941A9FD2A3D9DC400A4130C /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941A9FC2A3D9DC400A4130C /* DomainError.swift */; };
+		6941A9FF2A3D9E6300A4130C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941A9FE2A3D9E6300A4130C /* Log.swift */; };
+		697748782A3E320A004029A9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697748772A3E320A004029A9 /* UIColor+Extensions.swift */; };
+		6977487A2A3E34F0004029A9 /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697748792A3E34F0004029A9 /* TrackDetailViewController.swift */; };
+		6977487C2A3E361C004029A9 /* TrackDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6977487B2A3E361C004029A9 /* TrackDetailCoordinator.swift */; };
+		6977487E2A3E3753004029A9 /* TrackDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6977487D2A3E3753004029A9 /* TrackDetailViewModel.swift */; };
+		697748802A3E3A3C004029A9 /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6977487F2A3E3A3C004029A9 /* TrackDetailView.swift */; };
+		69A3DA2E2A3F37D000136127 /* StraussAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A3DA2D2A3F37D000136127 /* StraussAppUITests.swift */; };
+		69A3DA342A3F403D00136127 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA1C2A3B96DF00136EA0 /* MockURLProtocol.swift */; };
+		69A3DA352A3F404E00136127 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA212A3BAAA900136EA0 /* Extensions.swift */; };
+		69A3DA3A2A3F471D00136127 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = 69A3DA362A3F406000136127 /* Tracks.json */; };
+		69A91EA82A87EE6E007176CA /* MusicVideoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A91EA62A87EE6E007176CA /* MusicVideoEntity+CoreDataClass.swift */; };
+		69A91EA92A87EE6E007176CA /* MusicVideoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A91EA72A87EE6E007176CA /* MusicVideoEntity+CoreDataProperties.swift */; };
+		69F5C9D92A3B60A700136EA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5C9D82A3B60A700136EA0 /* AppDelegate.swift */; };
+		69F5C9DB2A3B60A700136EA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5C9DA2A3B60A700136EA0 /* SceneDelegate.swift */; };
+		69F5C9DD2A3B60A700136EA0 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5C9DC2A3B60A700136EA0 /* SearchResultViewController.swift */; };
+		69F5C9E52A3B60A700136EA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F5C9E42A3B60A700136EA0 /* Assets.xcassets */; };
+		69F5C9E82A3B60A700136EA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F5C9E62A3B60A700136EA0 /* LaunchScreen.storyboard */; };
+		69F5C9F32A3B60A700136EA0 /* iTunesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5C9F22A3B60A700136EA0 /* iTunesAPITests.swift */; };
+		69F5CA142A3B8B2900136EA0 /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA132A3B8B2900136EA0 /* iTunesAPI.swift */; };
+		69F5CA172A3B8DCF00136EA0 /* ResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA162A3B8DCF00136EA0 /* ResultResponse.swift */; };
+		69F5CA192A3B93B600136EA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA182A3B93B600136EA0 /* Extensions.swift */; };
+		69F5CA1D2A3B96DF00136EA0 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA1C2A3B96DF00136EA0 /* MockURLProtocol.swift */; };
+		69F5CA222A3BAAA900136EA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA212A3BAAA900136EA0 /* Extensions.swift */; };
+		69F5CA262A3C538700136EA0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA252A3C538700136EA0 /* Configuration.swift */; };
+		69F5CA282A3C6BAC00136EA0 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA272A3C6BAC00136EA0 /* SearchResponse.swift */; };
+		69F5CA362A3C774200136EA0 /* StraussAppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA352A3C774200136EA0 /* StraussAppStore.swift */; };
+		69F5CA3C2A3C949500136EA0 /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA3B2A3C949500136EA0 /* StorageTests.swift */; };
+		69F5CA3F2A3CAA0500136EA0 /* MusicTrackRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA3E2A3CAA0500136EA0 /* MusicTrackRepository.swift */; };
+		69F5CA422A3CAAF200136EA0 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA412A3CAAF200136EA0 /* MusicTrack.swift */; };
+		69F5CA452A3CCB2E00136EA0 /* TracksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F5CA442A3CCB2E00136EA0 /* TracksRepositoryTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69A3DA2F2A3F37D000136127 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69F5C9CD2A3B60A700136EA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69F5C9D42A3B60A700136EA0;
+			remoteInfo = CoinApp;
+		};
+		69F5C9EF2A3B60A700136EA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69F5C9CD2A3B60A700136EA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69F5C9D42A3B60A700136EA0;
+			remoteInfo = CoinApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		690C1D212A89563D00BB5F92 /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITests.xctestplan; sourceTree = "<group>"; };
+		690EEBA92A3DAB3400058B55 /* SearchStraussTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStraussTracksUseCase.swift; sourceTree = "<group>"; };
+		690EEBAC2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStraussTracksUseCaseTests.swift; sourceTree = "<group>"; };
+		690EEBAE2A3DAD0E00058B55 /* MockMusicTrackRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMusicTrackRepository.swift; sourceTree = "<group>"; };
+		690EEBB02A3DB76100058B55 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		690EEBB62A3DBFAD00058B55 /* SearchResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModelTests.swift; sourceTree = "<group>"; };
+		690EEBB82A3DBFD400058B55 /* MockSearchStraussTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchStraussTracksUseCase.swift; sourceTree = "<group>"; };
+		690EEBBA2A3DEA0C00058B55 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		690EEBBC2A3DEB2E00058B55 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		690EEBBE2A3DED0300058B55 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		6914370D2A890BF90068AD0A /* StraussAppStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StraussAppStore.xcdatamodel; sourceTree = "<group>"; };
+		6914370F2A8911B90068AD0A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		691437112A891B0D0068AD0A /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		691437132A89457D0068AD0A /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UnitTests.xctestplan; path = TestPlans/UnitTests.xctestplan; sourceTree = "<group>"; };
+		6941A9F82A3CCDCC00A4130C /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		6941A9FA2A3CD8C000A4130C /* MockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStore.swift; sourceTree = "<group>"; };
+		6941A9FC2A3D9DC400A4130C /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		6941A9FE2A3D9E6300A4130C /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		697748772A3E320A004029A9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		697748792A3E34F0004029A9 /* TrackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
+		6977487B2A3E361C004029A9 /* TrackDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailCoordinator.swift; sourceTree = "<group>"; };
+		6977487D2A3E3753004029A9 /* TrackDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewModel.swift; sourceTree = "<group>"; };
+		6977487F2A3E3A3C004029A9 /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
+		69A3DA292A3F37D000136127 /* StraussAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StraussAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A3DA2D2A3F37D000136127 /* StraussAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraussAppUITests.swift; sourceTree = "<group>"; };
+		69A3DA362A3F406000136127 /* Tracks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
+		69A91EA62A87EE6E007176CA /* MusicVideoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MusicVideoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		69A91EA72A87EE6E007176CA /* MusicVideoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MusicVideoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		69F5C9D52A3B60A700136EA0 /* StraussApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StraussApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69F5C9D82A3B60A700136EA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69F5C9DA2A3B60A700136EA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		69F5C9DC2A3B60A700136EA0 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		69F5C9E42A3B60A700136EA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69F5C9E72A3B60A700136EA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69F5C9E92A3B60A700136EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F5C9EE2A3B60A700136EA0 /* StraussAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StraussAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69F5C9F22A3B60A700136EA0 /* iTunesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPITests.swift; sourceTree = "<group>"; };
+		69F5CA132A3B8B2900136EA0 /* iTunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPI.swift; sourceTree = "<group>"; };
+		69F5CA162A3B8DCF00136EA0 /* ResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponse.swift; sourceTree = "<group>"; };
+		69F5CA182A3B93B600136EA0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		69F5CA1C2A3B96DF00136EA0 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		69F5CA212A3BAAA900136EA0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		69F5CA232A3C517000136EA0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		69F5CA252A3C538700136EA0 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		69F5CA272A3C6BAC00136EA0 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		69F5CA352A3C774200136EA0 /* StraussAppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraussAppStore.swift; sourceTree = "<group>"; };
+		69F5CA3B2A3C949500136EA0 /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
+		69F5CA3E2A3CAA0500136EA0 /* MusicTrackRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTrackRepository.swift; sourceTree = "<group>"; };
+		69F5CA412A3CAAF200136EA0 /* MusicTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
+		69F5CA442A3CCB2E00136EA0 /* TracksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepositoryTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69A3DA262A3F37D000136127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F5C9D22A3B60A700136EA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F5C9EB2A3B60A700136EA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		690EEBA82A3DAA0C00058B55 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				690EEBA92A3DAB3400058B55 /* SearchStraussTracksUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		690EEBAB2A3DABFC00058B55 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				690EEBAC2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		690EEBB22A3DBEF900058B55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				697748772A3E320A004029A9 /* UIColor+Extensions.swift */,
+				691437112A891B0D0068AD0A /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		690EEBB52A3DBF9A00058B55 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				690EEBB62A3DBFAD00058B55 /* SearchResultViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		69A3DA2A2A3F37D000136127 /* StraussAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				690C1D212A89563D00BB5F92 /* UITests.xctestplan */,
+				69A3DA2D2A3F37D000136127 /* StraussAppUITests.swift */,
+			);
+			path = StraussAppUITests;
+			sourceTree = "<group>";
+		};
+		69F5C9CC2A3B60A700136EA0 = {
+			isa = PBXGroup;
+			children = (
+				69F5C9D72A3B60A700136EA0 /* StraussApp */,
+				69F5C9F12A3B60A700136EA0 /* StraussAppTests */,
+				69A3DA2A2A3F37D000136127 /* StraussAppUITests */,
+				69F5C9D62A3B60A700136EA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69F5C9D62A3B60A700136EA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69F5C9D52A3B60A700136EA0 /* StraussApp.app */,
+				69F5C9EE2A3B60A700136EA0 /* StraussAppTests.xctest */,
+				69A3DA292A3F37D000136127 /* StraussAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69F5C9D72A3B60A700136EA0 /* StraussApp */ = {
+			isa = PBXGroup;
+			children = (
+				690EEBB22A3DBEF900058B55 /* Extensions */,
+				69F5CA242A3C536D00136EA0 /* Common */,
+				69F5CA102A3B660700136EA0 /* Features */,
+				69F5CA0F2A3B65EA00136EA0 /* API */,
+				69F5CA0E2A3B65DC00136EA0 /* CoreData */,
+				69F5CA0D2A3B659400136EA0 /* Project Files */,
+				69F5CA0C2A3B657D00136EA0 /* Repositories */,
+				69F5CA0B2A3B656700136EA0 /* Domain */,
+			);
+			path = StraussApp;
+			sourceTree = "<group>";
+		};
+		69F5C9F12A3B60A700136EA0 /* StraussAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				691437132A89457D0068AD0A /* UnitTests.xctestplan */,
+				690EEBB52A3DBF9A00058B55 /* ViewModels */,
+				690EEBAB2A3DABFC00058B55 /* UseCases */,
+				69F5CA1A2A3B96BB00136EA0 /* Mocks */,
+				69F5CA432A3CCB0500136EA0 /* Repositories */,
+				69F5CA3A2A3C947700136EA0 /* Storage */,
+				69F5CA1B2A3B96C400136EA0 /* API */,
+				69F5CA212A3BAAA900136EA0 /* Extensions.swift */,
+			);
+			path = StraussAppTests;
+			sourceTree = "<group>";
+		};
+		69F5CA0B2A3B656700136EA0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				690EEBA82A3DAA0C00058B55 /* UseCases */,
+				69F5CA402A3CAAE000136EA0 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		69F5CA0C2A3B657D00136EA0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA3E2A3CAA0500136EA0 /* MusicTrackRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		69F5CA0D2A3B659400136EA0 /* Project Files */ = {
+			isa = PBXGroup;
+			children = (
+				69F5C9D82A3B60A700136EA0 /* AppDelegate.swift */,
+				69F5C9DA2A3B60A700136EA0 /* SceneDelegate.swift */,
+				690EEBBE2A3DED0300058B55 /* SceneCoordinator.swift */,
+				69F5C9E42A3B60A700136EA0 /* Assets.xcassets */,
+				69F5C9E62A3B60A700136EA0 /* LaunchScreen.storyboard */,
+				69F5C9E92A3B60A700136EA0 /* Info.plist */,
+				69F5CA232A3C517000136EA0 /* Config.xcconfig */,
+			);
+			name = "Project Files";
+			sourceTree = "<group>";
+		};
+		69F5CA0E2A3B65DC00136EA0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA302A3C74C500136EA0 /* Entities */,
+				69F5CA352A3C774200136EA0 /* StraussAppStore.swift */,
+				6914370C2A890BF90068AD0A /* StraussAppStore.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		69F5CA0F2A3B65EA00136EA0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA292A3C6BE400136EA0 /* Responses */,
+				69F5CA132A3B8B2900136EA0 /* iTunesAPI.swift */,
+				69F5CA182A3B93B600136EA0 /* Extensions.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		69F5CA102A3B660700136EA0 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA122A3B66B600136EA0 /* MusicVideoDetail */,
+				69F5CA112A3B662300136EA0 /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		69F5CA112A3B662300136EA0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				69F5C9DC2A3B60A700136EA0 /* SearchResultViewController.swift */,
+				690EEBB02A3DB76100058B55 /* SearchResultViewModel.swift */,
+				690EEBBC2A3DEB2E00058B55 /* SearchCoordinator.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		69F5CA122A3B66B600136EA0 /* MusicVideoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				697748792A3E34F0004029A9 /* TrackDetailViewController.swift */,
+				6977487B2A3E361C004029A9 /* TrackDetailCoordinator.swift */,
+				6977487D2A3E3753004029A9 /* TrackDetailViewModel.swift */,
+				6977487F2A3E3A3C004029A9 /* TrackDetailView.swift */,
+			);
+			path = MusicVideoDetail;
+			sourceTree = "<group>";
+		};
+		69F5CA1A2A3B96BB00136EA0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA1C2A3B96DF00136EA0 /* MockURLProtocol.swift */,
+				69A3DA362A3F406000136127 /* Tracks.json */,
+				6941A9F82A3CCDCC00A4130C /* MockAPI.swift */,
+				6941A9FA2A3CD8C000A4130C /* MockStore.swift */,
+				690EEBAE2A3DAD0E00058B55 /* MockMusicTrackRepository.swift */,
+				690EEBB82A3DBFD400058B55 /* MockSearchStraussTracksUseCase.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		69F5CA1B2A3B96C400136EA0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				69F5C9F22A3B60A700136EA0 /* iTunesAPITests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		69F5CA242A3C536D00136EA0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA252A3C538700136EA0 /* Configuration.swift */,
+				6941A9FE2A3D9E6300A4130C /* Log.swift */,
+				690EEBBA2A3DEA0C00058B55 /* Coordinator.swift */,
+				6914370F2A8911B90068AD0A /* ImageCache.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		69F5CA292A3C6BE400136EA0 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA272A3C6BAC00136EA0 /* SearchResponse.swift */,
+				69F5CA162A3B8DCF00136EA0 /* ResultResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		69F5CA302A3C74C500136EA0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA372A3C8DD200136EA0 /* MusicTrackEntity */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		69F5CA372A3C8DD200136EA0 /* MusicTrackEntity */ = {
+			isa = PBXGroup;
+			children = (
+				69A91EA62A87EE6E007176CA /* MusicVideoEntity+CoreDataClass.swift */,
+				69A91EA72A87EE6E007176CA /* MusicVideoEntity+CoreDataProperties.swift */,
+			);
+			path = MusicTrackEntity;
+			sourceTree = "<group>";
+		};
+		69F5CA3A2A3C947700136EA0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA3B2A3C949500136EA0 /* StorageTests.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		69F5CA402A3CAAE000136EA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA412A3CAAF200136EA0 /* MusicTrack.swift */,
+				6941A9FC2A3D9DC400A4130C /* DomainError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		69F5CA432A3CCB0500136EA0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				69F5CA442A3CCB2E00136EA0 /* TracksRepositoryTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69A3DA282A3F37D000136127 /* StraussAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A3DA312A3F37D000136127 /* Build configuration list for PBXNativeTarget "StraussAppUITests" */;
+			buildPhases = (
+				69A3DA252A3F37D000136127 /* Sources */,
+				69A3DA262A3F37D000136127 /* Frameworks */,
+				69A3DA272A3F37D000136127 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69A3DA302A3F37D000136127 /* PBXTargetDependency */,
+			);
+			name = StraussAppUITests;
+			productName = CoinAppUITests;
+			productReference = 69A3DA292A3F37D000136127 /* StraussAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		69F5C9D42A3B60A700136EA0 /* StraussApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69F5CA022A3B60A800136EA0 /* Build configuration list for PBXNativeTarget "StraussApp" */;
+			buildPhases = (
+				69F5C9D12A3B60A700136EA0 /* Sources */,
+				69F5C9D22A3B60A700136EA0 /* Frameworks */,
+				69F5C9D32A3B60A700136EA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StraussApp;
+			packageProductDependencies = (
+			);
+			productName = CoinApp;
+			productReference = 69F5C9D52A3B60A700136EA0 /* StraussApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69F5C9ED2A3B60A700136EA0 /* StraussAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69F5CA052A3B60A800136EA0 /* Build configuration list for PBXNativeTarget "StraussAppTests" */;
+			buildPhases = (
+				69F5C9EA2A3B60A700136EA0 /* Sources */,
+				69F5C9EB2A3B60A700136EA0 /* Frameworks */,
+				69F5C9EC2A3B60A700136EA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69F5C9F02A3B60A700136EA0 /* PBXTargetDependency */,
+			);
+			name = StraussAppTests;
+			packageProductDependencies = (
+			);
+			productName = CoinAppTests;
+			productReference = 69F5C9EE2A3B60A700136EA0 /* StraussAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69F5C9CD2A3B60A700136EA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					69A3DA282A3F37D000136127 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 69F5C9D42A3B60A700136EA0;
+					};
+					69F5C9D42A3B60A700136EA0 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					69F5C9ED2A3B60A700136EA0 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 69F5C9D42A3B60A700136EA0;
+					};
+				};
+			};
+			buildConfigurationList = 69F5C9D02A3B60A700136EA0 /* Build configuration list for PBXProject "StraussApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69F5C9CC2A3B60A700136EA0;
+			packageReferences = (
+			);
+			productRefGroup = 69F5C9D62A3B60A700136EA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69F5C9D42A3B60A700136EA0 /* StraussApp */,
+				69F5C9ED2A3B60A700136EA0 /* StraussAppTests */,
+				69A3DA282A3F37D000136127 /* StraussAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69A3DA272A3F37D000136127 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F5C9D32A3B60A700136EA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F5C9E82A3B60A700136EA0 /* LaunchScreen.storyboard in Resources */,
+				69F5C9E52A3B60A700136EA0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F5C9EC2A3B60A700136EA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A3DA3A2A3F471D00136127 /* Tracks.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69A3DA252A3F37D000136127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A3DA342A3F403D00136127 /* MockURLProtocol.swift in Sources */,
+				69A3DA2E2A3F37D000136127 /* StraussAppUITests.swift in Sources */,
+				69A3DA352A3F404E00136127 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F5C9D12A3B60A700136EA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				691437122A891B0D0068AD0A /* UIImageView+Extensions.swift in Sources */,
+				69F5C9DD2A3B60A700136EA0 /* SearchResultViewController.swift in Sources */,
+				690EEBB12A3DB76100058B55 /* SearchResultViewModel.swift in Sources */,
+				69F5CA172A3B8DCF00136EA0 /* ResultResponse.swift in Sources */,
+				69F5C9D92A3B60A700136EA0 /* AppDelegate.swift in Sources */,
+				69F5CA142A3B8B2900136EA0 /* iTunesAPI.swift in Sources */,
+				6941A9FF2A3D9E6300A4130C /* Log.swift in Sources */,
+				6977487C2A3E361C004029A9 /* TrackDetailCoordinator.swift in Sources */,
+				69A91EA82A87EE6E007176CA /* MusicVideoEntity+CoreDataClass.swift in Sources */,
+				69F5CA422A3CAAF200136EA0 /* MusicTrack.swift in Sources */,
+				690EEBAA2A3DAB3400058B55 /* SearchStraussTracksUseCase.swift in Sources */,
+				6977487A2A3E34F0004029A9 /* TrackDetailViewController.swift in Sources */,
+				690EEBBD2A3DEB2E00058B55 /* SearchCoordinator.swift in Sources */,
+				69F5CA362A3C774200136EA0 /* StraussAppStore.swift in Sources */,
+				69F5CA282A3C6BAC00136EA0 /* SearchResponse.swift in Sources */,
+				690EEBBB2A3DEA0C00058B55 /* Coordinator.swift in Sources */,
+				6977487E2A3E3753004029A9 /* TrackDetailViewModel.swift in Sources */,
+				697748802A3E3A3C004029A9 /* TrackDetailView.swift in Sources */,
+				69F5CA3F2A3CAA0500136EA0 /* MusicTrackRepository.swift in Sources */,
+				6941A9FD2A3D9DC400A4130C /* DomainError.swift in Sources */,
+				69F5C9DB2A3B60A700136EA0 /* SceneDelegate.swift in Sources */,
+				69F5CA262A3C538700136EA0 /* Configuration.swift in Sources */,
+				69F5CA192A3B93B600136EA0 /* Extensions.swift in Sources */,
+				697748782A3E320A004029A9 /* UIColor+Extensions.swift in Sources */,
+				690EEBBF2A3DED0300058B55 /* SceneCoordinator.swift in Sources */,
+				69A91EA92A87EE6E007176CA /* MusicVideoEntity+CoreDataProperties.swift in Sources */,
+				691437102A8911B90068AD0A /* ImageCache.swift in Sources */,
+				6914370E2A890BF90068AD0A /* StraussAppStore.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F5C9EA2A3B60A700136EA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F5C9F32A3B60A700136EA0 /* iTunesAPITests.swift in Sources */,
+				690EEBB72A3DBFAD00058B55 /* SearchResultViewModelTests.swift in Sources */,
+				69F5CA3C2A3C949500136EA0 /* StorageTests.swift in Sources */,
+				69F5CA452A3CCB2E00136EA0 /* TracksRepositoryTests.swift in Sources */,
+				690EEBAD2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift in Sources */,
+				6941A9FB2A3CD8C000A4130C /* MockStore.swift in Sources */,
+				69F5CA222A3BAAA900136EA0 /* Extensions.swift in Sources */,
+				690EEBB92A3DBFD400058B55 /* MockSearchStraussTracksUseCase.swift in Sources */,
+				690EEBAF2A3DAD0E00058B55 /* MockMusicTrackRepository.swift in Sources */,
+				6941A9F92A3CCDCC00A4130C /* MockAPI.swift in Sources */,
+				69F5CA1D2A3B96DF00136EA0 /* MockURLProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69A3DA302A3F37D000136127 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69F5C9D42A3B60A700136EA0 /* StraussApp */;
+			targetProxy = 69A3DA2F2A3F37D000136127 /* PBXContainerItemProxy */;
+		};
+		69F5C9F02A3B60A700136EA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69F5C9D42A3B60A700136EA0 /* StraussApp */;
+			targetProxy = 69F5C9EF2A3B60A700136EA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69F5C9E62A3B60A700136EA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69F5C9E72A3B60A700136EA0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69A3DA322A3F37D000136127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3DKGR29WG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zontag.StraussAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StraussApp;
+			};
+			name = Debug;
+		};
+		69A3DA332A3F37D000136127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3DKGR29WG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zontag.StraussAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StraussApp;
+			};
+			name = Release;
+		};
+		69F5CA002A3B60A800136EA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69F5CA232A3C517000136EA0 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69F5CA012A3B60A800136EA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69F5CA232A3C517000136EA0 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69F5CA032A3B60A800136EA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3DKGR29WG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StraussApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Strauss App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zontag.StraussApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69F5CA042A3B60A800136EA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3DKGR29WG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StraussApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Strauss App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zontag.StraussApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69F5CA062A3B60A800136EA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3DKGR29WG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zontag.StraussAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StraussApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StraussApp";
+			};
+			name = Debug;
+		};
+		69F5CA072A3B60A800136EA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3DKGR29WG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zontag.StraussAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StraussApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StraussApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69A3DA312A3F37D000136127 /* Build configuration list for PBXNativeTarget "StraussAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A3DA322A3F37D000136127 /* Debug */,
+				69A3DA332A3F37D000136127 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69F5C9D02A3B60A700136EA0 /* Build configuration list for PBXProject "StraussApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F5CA002A3B60A800136EA0 /* Debug */,
+				69F5CA012A3B60A800136EA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69F5CA022A3B60A800136EA0 /* Build configuration list for PBXNativeTarget "StraussApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F5CA032A3B60A800136EA0 /* Debug */,
+				69F5CA042A3B60A800136EA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69F5CA052A3B60A800136EA0 /* Build configuration list for PBXNativeTarget "StraussAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F5CA062A3B60A800136EA0 /* Debug */,
+				69F5CA072A3B60A800136EA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6914370C2A890BF90068AD0A /* StraussAppStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6914370D2A890BF90068AD0A /* StraussAppStore.xcdatamodel */,
+			);
+			currentVersion = 6914370D2A890BF90068AD0A /* StraussAppStore.xcdatamodel */;
+			path = StraussAppStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 69F5C9CD2A3B60A700136EA0 /* Project object */;
+}
