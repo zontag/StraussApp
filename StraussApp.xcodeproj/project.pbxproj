@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		690EEBAA2A3DAB3400058B55 /* SearchStraussTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBA92A3DAB3400058B55 /* SearchStraussTracksUseCase.swift */; };
+		690EEBAA2A3DAB3400058B55 /* SearchTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBA92A3DAB3400058B55 /* SearchTracksUseCase.swift */; };
 		690EEBAD2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBAC2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift */; };
 		690EEBAF2A3DAD0E00058B55 /* MockMusicTrackRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBAE2A3DAD0E00058B55 /* MockMusicTrackRepository.swift */; };
 		690EEBB12A3DB76100058B55 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690EEBB02A3DB76100058B55 /* SearchResultViewModel.swift */; };
@@ -73,7 +73,7 @@
 
 /* Begin PBXFileReference section */
 		690C1D212A89563D00BB5F92 /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITests.xctestplan; sourceTree = "<group>"; };
-		690EEBA92A3DAB3400058B55 /* SearchStraussTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStraussTracksUseCase.swift; sourceTree = "<group>"; };
+		690EEBA92A3DAB3400058B55 /* SearchTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTracksUseCase.swift; sourceTree = "<group>"; };
 		690EEBAC2A3DAC1900058B55 /* SearchStraussTracksUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStraussTracksUseCaseTests.swift; sourceTree = "<group>"; };
 		690EEBAE2A3DAD0E00058B55 /* MockMusicTrackRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMusicTrackRepository.swift; sourceTree = "<group>"; };
 		690EEBB02A3DB76100058B55 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		690EEBA82A3DAA0C00058B55 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				690EEBA92A3DAB3400058B55 /* SearchStraussTracksUseCase.swift */,
+				690EEBA92A3DAB3400058B55 /* SearchTracksUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -562,7 +562,7 @@
 				6977487C2A3E361C004029A9 /* TrackDetailCoordinator.swift in Sources */,
 				69A91EA82A87EE6E007176CA /* MusicVideoEntity+CoreDataClass.swift in Sources */,
 				69F5CA422A3CAAF200136EA0 /* MusicTrack.swift in Sources */,
-				690EEBAA2A3DAB3400058B55 /* SearchStraussTracksUseCase.swift in Sources */,
+				690EEBAA2A3DAB3400058B55 /* SearchTracksUseCase.swift in Sources */,
 				6977487A2A3E34F0004029A9 /* TrackDetailViewController.swift in Sources */,
 				690EEBBD2A3DEB2E00058B55 /* SearchCoordinator.swift in Sources */,
 				69F5CA362A3C774200136EA0 /* StraussAppStore.swift in Sources */,

@@ -1,10 +1,10 @@
 import Foundation
 
-protocol SearchStraussTracksUseCase {
+protocol SearchTracksUseCase {
     func callAsFunction() async -> ([MusicTrack], DomainError?)
 }
 
-struct SearchStraussTracks: SearchStraussTracksUseCase {
+struct SearchStraussTracks: SearchTracksUseCase {
 
     let repository: MusicTrackRepositoryCompatible
 

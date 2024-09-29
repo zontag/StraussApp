@@ -1,7 +1,7 @@
 import UIKit
 
 @MainActor
-final class SearchResultViewController<SomeSearchStraussTracks: SearchStraussTracksUseCase>: UICollectionViewController {
+final class SearchResultViewController<SomeSearchStraussTracks: SearchTracksUseCase>: UICollectionViewController {
 
     // MARK: Typealias
 
@@ -15,7 +15,6 @@ final class SearchResultViewController<SomeSearchStraussTracks: SearchStraussTra
     private var didSelect: ((MusicTrack) -> Void)?
     private var cellRegistration: CellRegistration?
     private let refreshControl = UIRefreshControl()
-    private let accentColor = #colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)
 
     private lazy var dataSource = DataSource(collectionView: collectionView)
     { [weak self] in self?.provideCell($0, $1, $2) }

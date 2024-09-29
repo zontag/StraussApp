@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class ImageCache {
+actor ImageCache {
 
     static let shared = ImageCache()
     private let cache = NSCache<NSString, UIImage>()

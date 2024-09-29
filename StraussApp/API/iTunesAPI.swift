@@ -41,7 +41,7 @@ final class iTunesAPI: API, Loging {
 
     private func request<T: Decodable>(url: URL) async throws -> T {
 
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
 
         let (data, response) = try await urlSession.data(for: request)
 

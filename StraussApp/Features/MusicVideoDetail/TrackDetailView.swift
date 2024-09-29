@@ -42,17 +42,41 @@ final class TrackDetailView: UIView {
         }
     }
 
-    var previewURL: URL? {
+    var previewURL: URL?
+
+    // MARK: Private properties
+
+    private var player: AVPlayer?
+
+    private var isPlaying: Bool = false {
         didSet {
-            createPlayer()
+            setupPlayerState()
         }
     }
 
-    private func createPlayer() {
+    private var timeObserverToken: Any?
+
+    // MARK: Private methods
+
+    private func createPlayer() async {
         guard let previewURL else { return }
         let asset = AVAsset(url: previewURL)
         let playerItem = AVPlayerItem(asset: asset)
         self.player = AVPlayer(playerItem: playerItem)
+        self.player?.actionAtItemEnd = .pause
+
+        let interval = CMTimeMultiplyByFloat64(asset.duration, multiplier: 0.99)
+
+
+        timeObserverToken = self.player?.addBoundaryTimeObserver(
+            forTimes: [
+                NSValue(time: interval)
+                //NSValue(time: playerItem.duration)
+            ],
+            queue: DispatchQueue.main,
+            using: { [weak self] in
+                self?.isPlaying.toggle()
+            })
     }
 
     private func setupPlayerState() {
@@ -60,21 +84,20 @@ final class TrackDetailView: UIView {
         previewButton.setTitle(btnTitle, for: .normal)
 
         if self.isPlaying {
-            createPlayer()
-            self.player?.play()
+            var createPlayerToken = Task(priority: .userInitiated) {
+                await createPlayer()
+                await MainActor.run {
+                    self.player?.play()
+                }
+            }
         } else {
-            self.player?.pause()
-            self.player = nil
+            self.stopPlayer()
         }
     }
 
-    // MARK: Private properties
-    private var player: AVPlayer?
-
-    private var isPlaying: Bool = false {
-        didSet {
-            setupPlayerState()
-        }
+    private func stopPlayer() {
+        self.player?.pause()
+        self.player = nil
     }
 
     // MARK: Views
@@ -97,6 +120,7 @@ final class TrackDetailView: UIView {
     private lazy var trackNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
 
@@ -111,6 +135,7 @@ final class TrackDetailView: UIView {
     private lazy var artistNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
 
@@ -125,6 +150,7 @@ final class TrackDetailView: UIView {
     private lazy var collectionNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
 
@@ -139,6 +165,7 @@ final class TrackDetailView: UIView {
     private lazy var collectionPriceLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
 
@@ -197,6 +224,9 @@ final class TrackDetailView: UIView {
     }
 
     deinit {
+        if let timeObserverToken {
+            self.player?.removeTimeObserver(timeObserverToken)
+        }
         self.player?.pause()
         self.player = nil
     }

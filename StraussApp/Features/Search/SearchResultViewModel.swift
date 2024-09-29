@@ -1,7 +1,7 @@
 import Foundation
 
 @MainActor
-final class SearchResultViewModel<SomeSearchStraussTracks: SearchStraussTracksUseCase> {
+final class SearchResultViewModel<SomeSearchStraussTracks: SearchTracksUseCase> {
 
     // MARK: Private properties
     private let searchTracks: SomeSearchStraussTracks

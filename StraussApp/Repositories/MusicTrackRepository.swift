@@ -28,7 +28,6 @@ final class MusicTrackRepository<Remote: API, Storage: Store>: MusicTrackReposit
             resultResponse = searchResponse.results ?? []
         } catch {
             log(error)
-            // Mapping the error for future propagation
             fetchError = DomainError.remoteFailure
         }
 
@@ -61,7 +60,6 @@ final class MusicTrackRepository<Remote: API, Storage: Store>: MusicTrackReposit
                 storage.saveContext()
             } catch {
                 log(error)
-                // Mapping the error for future propagation
                 fetchError = DomainError.storeFailure
             }
         }

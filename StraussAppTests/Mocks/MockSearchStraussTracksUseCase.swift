@@ -1,7 +1,7 @@
 import Foundation
 @testable import StraussApp
 
-final class MockSearchStraussTracksUseCase: SearchStraussTracksUseCase {
+final class MockSearchStraussTracksUseCase: SearchTracksUseCase {
 
     var result: ([StraussApp.MusicTrack], StraussApp.DomainError?)!
 
