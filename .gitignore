@@ -16,3 +16,4 @@ build/
 
 # macOS-specific files
 .DS_Store
+/StraussApp.xcodeproj/xcuserdata
