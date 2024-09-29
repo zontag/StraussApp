@@ -1,2 +1,17 @@
+# Xcode-specific files
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata
+*.xcconfig
+*.xcodeproj/project.xcworkspace/data.xcworkspacedata
+*.xcodeproj/project.xcworkspace/xcuserdata
+*.xcodeproj/xcuserdata
+*.xcodeproj/xcuserdata/*/*/*.xcuserstate
+DerivedData
+build/
+*.pbxuser
+*.modeld/.DS_Store
+*.xcdatamodeld/.DS_Store
 
-/StraussApp.xcodeproj/xcuserdata
+# macOS-specific files
+.DS_Store
