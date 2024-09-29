@@ -58,7 +58,7 @@ final class TrackDetailView: UIView {
 
     // MARK: Private methods
 
-    private func createPlayer() async {
+    private func createPlayer(didPlayAction: @escaping () -> Void) {
         guard let previewURL else { return }
         let asset = AVAsset(url: previewURL)
         let playerItem = AVPlayerItem(asset: asset)
@@ -67,32 +67,28 @@ final class TrackDetailView: UIView {
 
         let interval = CMTimeMultiplyByFloat64(asset.duration, multiplier: 0.99)
 
-
         timeObserverToken = self.player?.addBoundaryTimeObserver(
             forTimes: [
                 NSValue(time: interval)
                 //NSValue(time: playerItem.duration)
             ],
             queue: DispatchQueue.main,
-            using: { [weak self] in
-                self?.isPlaying.toggle()
-            })
+            using: didPlayAction)
     }
 
     private func setupPlayerState() {
         let btnTitle = isPlaying ? "Stop" : "Play"
         previewButton.setTitle(btnTitle, for: .normal)
 
-        if self.isPlaying {
-            var createPlayerToken = Task(priority: .userInitiated) {
-                await createPlayer()
-                await MainActor.run {
-                    self.player?.play()
-                }
-            }
-        } else {
+        if self.isPlaying == false {
             self.stopPlayer()
+            return
         }
+
+        createPlayer(didPlayAction: { [weak self] in
+            self?.isPlaying.toggle()
+        })
+        self.player?.play()
     }
 
     private func stopPlayer() {
